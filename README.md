@@ -15,6 +15,7 @@ https://storiesjs.com/demos
 
 <h2>Example of CODE</h2>
 ```html
+
 <script>
     var story = new sStory({
         thumbWrapperClass: '.sStory-thumb-wrapper', //default
@@ -29,6 +30,7 @@ https://storiesjs.com/demos
         data: storiesData //storiesData.js JSON List
     });
 </script>
+
 ```
 
 ![alt text](https://storiesjs.com/sStory-ss.png)
