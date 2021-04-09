@@ -33,4 +33,4 @@ https://storiesjs.com/demos
 </code>
 </pre>
 
-![alt text](https://storiesjs.com/sStory-ss.png)
+![alt text](https://storiesjs.com/sStory-cover.png)
