@@ -14,7 +14,6 @@ https://storiesjs.com/demos
 ```
 
 <h2>Example of CODE</h2>
-```html
 <pre>
 <code>
 <script>
@@ -33,6 +32,5 @@ https://storiesjs.com/demos
 </script>
 </code>
 </pre>
-```
 
 ![alt text](https://storiesjs.com/sStory-ss.png)
