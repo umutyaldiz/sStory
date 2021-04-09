@@ -7,10 +7,12 @@ https://storiesjs.com/demos
 <h2>Example of code</h2>
 
 <pre>
+    <code>
     <div class="story-area">
         <div class="sStory-thumb-wrapper"></div> //default
         <div class="sStory-media-wrapper"></div> //default
     </div>
+    </code>
 </pre>
 
 <pre>
