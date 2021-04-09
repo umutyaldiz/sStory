@@ -5,7 +5,18 @@ import modal from './modal';
 
 export default class thumbCreate {
     constructor(props) {
-        this.options = Object.assign({}, props);
+        this.default = {
+            thumbWrapperClass: '.sStory-thumb-wrapper',
+            thumbItemClass: 'item',
+            mediaWrapperClass: '.sStory-media-wrapper',
+            mediaItemClass: 'media',
+            language: {
+                button: "Detaylı Bilgi",
+                sendLabel: "Paylaş",
+                sendButton: "Gönder"
+            }
+        };
+        this.options = Object.assign(this.default, props);
         this.thumbWrapper = document.querySelector(this.options.thumbWrapperClass);
         this.thumbItemClass = this.options.thumbItemClass;
         this.data = this.options.data;

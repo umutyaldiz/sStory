@@ -1,6 +1,61 @@
-window.storiesData = [
+storiesData = [
         {
                 id: 0,
+                title: "Survey",
+                cover: "/src/media/survey-cover.jpg",
+                updateTime: 1617486651107,
+                media: [
+                        {
+                                id: 1,
+                                title: "Lorem İpsum Dolar sit amet 1",
+                                type: "survey",
+                                surveyType: 1,
+                                src: '/src/media/book-story1.jpg',
+                                time: 10,
+                                link: 'https: //www.google.com',
+                                social: [
+                                        {
+                                                type: "facebook",
+                                                text: "Facebook",
+                                                link: "umutyaldiz.com/type/link/detail",
+                                                shortLink: "https://www.facebook.com/",
+                                        },
+                                        {
+                                                type: "twitter",
+                                                text: "Twitter",
+                                                link: "umutyaldiz.com/type/link/detail",
+                                                shortLink: "https://twitter.com/",
+                                        },
+                                        {
+                                                type: "whatsapp",
+                                                text: "Whatsapp",
+                                                link: "umutyaldiz.com/type/link/detail",
+                                                shortLink: "https://web.whatsapp.com/",
+                                        }
+                                ],
+                                api: "https://storiesjs.com/api",
+                                voted: false,
+                                survey: [
+                                        {
+                                                name: "UMUT",
+                                                value: "yaldiz",
+                                                vote: 100,
+                                                textColor: "#333333",
+                                                bgColor: "#06c",
+                                        },
+                                        {
+                                                name: "YALDIZ",
+                                                value: "yaldiz",
+                                                vote: 50,
+                                                textColor: "#06c",
+                                                bgColor: "#333333"
+                                        }
+                                ]
+                        }
+                ]
+        },
+        {
+                id: 1,
                 title: "Youtube Embed",
                 cover: "/src/media/youtube-cover.jpg",
                 updateTime: 1617486651107,
@@ -64,7 +119,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 1,
+                id: 2,
                 title: "Twitter Embed",
                 cover: "/src/media/twitter-cover.jpg",
                 updateTime: "1617478918791",
@@ -128,7 +183,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 2,
+                id: 3,
                 title: "Fashion",
                 cover: "/src/media/news-cover-2.jpg",
                 updateTime: "1617478918791",
@@ -248,7 +303,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 3,
+                id: 4,
                 title: "Book",
                 cover: "/src/media/book-story-cover.jpg",
                 updateTime: "1617478918791",
@@ -368,7 +423,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 4,
+                id: 5,
                 title: "News",
                 cover: "/src/media/news-cover.jpg",
                 updateTime: "1617478918791",
@@ -488,7 +543,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 5,
+                id: 6,
                 title: "Movies",
                 cover: "/src/media/movies-cover.jpg",
                 updateTime: "1617478918791",
@@ -552,7 +607,7 @@ window.storiesData = [
                 ]
         },
         {
-                id: 6,
+                id: 7,
                 title: "Online",
                 cover: "/src/media/online-cover.jpg",
                 updateTime: "1617478918791",

@@ -2,19 +2,14 @@ import EventEmitter from 'events';
 import timerManager from './timerManager';
 import storage from './sessionStorage';
 import modal from './modal';
+import dataSend from './fetch';
 
 export default class mediaCreate extends EventEmitter {
     constructor(props) {
         super(props);
 
-        this.language = {
-            button: "Detaylı Bilgi",
-            sendLabel: "Paylaş",
-            sendButton: "Gönder"
-        };
-
-        this.language = Object.assign(this.language, props.language);
-        this.options = Object.assign({}, props);
+        this.defaults = props;
+        this.options = Object.assign(this.defaults, props);
 
         this.mediaWrapper = document.querySelector(this.options.mediaWrapperClass)
         this.mediaItemClass = this.options.mediaItemClass;
@@ -26,6 +21,7 @@ export default class mediaCreate extends EventEmitter {
         this.progressItem = [];
         this.currentVideo = "";
         this.storage = new storage();
+        this.dataSend = new dataSend();
         this.videoMute = this.storage.get("storyMuted");
         this.mediaLoaded = true;
 
@@ -228,7 +224,7 @@ export default class mediaCreate extends EventEmitter {
             media.preload = "metadata";
             //media.src = item.src;
             media.setAttribute("data-src", item.src);
-        } else if (item.type === "image") {
+        } else if (item.type === "image" || item.type === "survey") {
             media = document.createElement("img");
             media.src = item.src;
             media.onerror = () => {
@@ -254,6 +250,8 @@ export default class mediaCreate extends EventEmitter {
             mediaItem.appendChild(mediaTitle);
         }
 
+
+
         // mediaItem.removeEventListener("click");
 
         if (mediaItem.removeEventListener) {
@@ -271,9 +269,90 @@ export default class mediaCreate extends EventEmitter {
                 }
             }
         });
+
+        if (item.type === "survey") {
+            const survey = self.buildSurvey(item); //survey
+            body.appendChild(survey);
+        }
         body.appendChild(mediaItem);
 
         return body;
+    }
+
+    voteEvent(e, item) {
+        let value = e.target.value;
+
+        this.dataSend.post(item.api, {
+            "id": item.id,
+            "value": value
+        });
+
+        const storageSet = JSON.parse(this.storage.get("mediaWatchSet")) || [];
+
+        if (storageSet.length) {
+            for (let i = 0, storageLength = storageSet.length; i < storageLength; i++) {
+                const element = storageSet[i];
+                if (element.id == this.data.id) {
+                    element.time = new Date().getTime();
+                    element.vote = true;
+                }
+            }
+        }
+
+        this.storage.set("mediaWatchSet", JSON.stringify(storageSet));
+
+        this.selectedItem.querySelector('.body .survey').remove();
+        this.selectedItem.querySelector('.body').appendChild(this.buildSurvey(item));
+
+    }
+
+    buildSurvey(item) {
+        const self = this;
+
+        let survey = item.survey;
+        const voted = item.voted;
+
+        let html = document.createElement("div");
+        html.className = "survey";
+
+        for (let i = 0, length = survey.length; i < length; i++) {
+            const element = survey[i];
+            let button = document.createElement("button");
+            button.className = "button";
+            button.setAttribute('value', element.value);
+            button.style.color = element.textColor;
+            button.style.backgroundColor = element.bgColor;
+
+            let voteSpan = document.createElement('span');
+            let voteCalculate = element.vote;
+
+            const storageSet = JSON.parse(this.storage.get("mediaWatchSet")) || [];
+            let votedTemp = false;
+            if (storageSet.length) {
+                for (let i = 0, storageLength = storageSet.length; i < storageLength; i++) {
+                    const el = storageSet[i];
+                    if (el.id == this.data.id) {
+                        if (el.vote) {
+                            votedTemp = true;
+                        }
+                    }
+                }
+            }
+
+            if (voted || votedTemp) {
+                voteSpan.style.width = voteCalculate;
+                voteSpan.innerHTML = "<i>" + voteCalculate + "</i>";
+            } else {
+                button.addEventListener("click", (e) => {
+                    self.voteEvent(e, item);
+                });
+            }
+            button.innerText = element.name;
+            button.appendChild(voteSpan);
+
+            html.appendChild(button);
+        }
+        return html;
     }
 
     pageCoordinate(x, y) {
@@ -328,7 +407,7 @@ export default class mediaCreate extends EventEmitter {
 
         let shareButton = document.createElement("button");
         shareButton.className = "share";
-        shareButton.innerText = this.language.sendLabel;
+        shareButton.innerText = this.options.language.sendLabel;
 
         shareButton.addEventListener("click", () => {
             this.selectedItem.querySelector('.popup').classList.toggle("active");
@@ -372,7 +451,7 @@ export default class mediaCreate extends EventEmitter {
         });
 
         let label = document.createElement("label");
-        label.innerHTML = this.language.sendLabel;
+        label.innerHTML = this.options.language.sendLabel;
 
         popup.appendChild(popupClose);
         popup.appendChild(label);
@@ -389,7 +468,7 @@ export default class mediaCreate extends EventEmitter {
 
         let sendButton = document.createElement("button");
         sendButton.className = "send";
-        sendButton.innerHTML = this.language.sendButton;
+        sendButton.innerHTML = this.options.language.sendButton;
         sendButton.addEventListener("click", () => {
             if (this.checkSocial()) {
                 const socials = this.selectedItem.querySelectorAll('.popup .button.active button');
@@ -460,6 +539,9 @@ export default class mediaCreate extends EventEmitter {
 
         self.selectedItem = document.querySelectorAll('.' + this.mediaItemClass)[self.currentItem];
         self.selectedItem.classList.add("active");
+        setTimeout(() => {
+            self.selectedItem.querySelector('.media-item').classList.add("animation");
+        }, 25);        
 
         self.progressItem = this.mediaWrapper.querySelectorAll('.progress .progress-item')[self.currentItem];
         self.progressItem.classList.add("active");
@@ -592,6 +674,7 @@ export default class mediaCreate extends EventEmitter {
 
     next() {
         this.selectedItem.classList.remove("active");
+        this.selectedItem.querySelector('.media-item').classList.remove("animation");
         this.selectedItem.classList.remove("pause");
         this.selectedItem.classList.add("seen");
 
@@ -606,6 +689,7 @@ export default class mediaCreate extends EventEmitter {
 
     prev() {
         this.selectedItem.classList.remove("active");
+        this.selectedItem.querySelector('.media-item').classList.remove("animation");
         this.selectedItem.classList.remove("pause");
         this.selectedItem.classList.remove("seen");
 
