@@ -1,0 +1,67 @@
+.homepage{
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    height: 100%; 
+    .logo{}
+    .info{
+        position: absolute; left: 0; bottom: 30px;
+        width: 100%; 
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        .authors{
+            max-width: 640px; width: 100%;
+            display: flex; align-items: center; justify-content: space-around;
+            a{
+                text-decoration: none;
+                display: flex; align-items: center; color: #000000;
+                
+                .img{
+                    width: 40px; height: 40px; margin: 0 10px 0 0; background-color: #f1f1f1;
+                    border-radius: 50%; overflow: hidden;
+                    img{max-width: 100%;}
+                }
+                .author{
+                    display: flex; flex-direction: column;
+                    strong{
+                        font-size: 16px; font-weight: bold;
+                    }
+                    small{
+                        font-size: 14px;
+                    }
+                }
+                &.reverse{
+                    flex-direction: row-reverse;
+                    .img{margin: 0 0 0 10px;}
+                }
+
+            }
+        }
+        .buttons{
+            display: block; margin: 25px 0 0;
+            max-width: 640px; width: 100%; text-align: center;
+            a{
+                display: inline-block; height: 50px; padding: 0 40px; margin: 0 10px;
+                border: 2px solid #202020; border-radius: 5px; 
+                color: #202020; font-size: 18px; line-height: 50px; font-weight: bold; text-align: center;
+                text-decoration: none; transition: background-color .3s;
+                &:hover{
+                    background-color: #202020; color: #ffffff;
+                }
+            }
+        }
+    }
+    .story-area{
+        display: flex; align-items: center; justify-content: center;
+        max-width: 100%; width: calc(100% - 10px); padding: 0 10px 0 0;
+        margin: 20px 0; text-align: center;
+    }
+    .js-embed{
+        display: block; width: 550px; max-width: calc(100% - 40px);
+        margin: 0 auto 180px;        
+        padding: 10px 20px;
+        background-color: #f5f2f0;
+        text-align: left;
+        border-radius: 10px; overflow: auto;
+        pre{
+            margin: 0px;
+        }
+    }
+}

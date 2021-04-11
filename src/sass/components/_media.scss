@@ -1,0 +1,43 @@
+.sStory-media-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    transform: scale(0.1);
+    transition: 0.15s;
+    z-index: 999999;
+    &.active {
+        bottom: 0;
+        transform: scale(1);
+    }
+    .media-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 640px;
+        height: 100%;
+        max-height: 1140px;
+        position: relative;
+        margin: 0 auto;
+
+        @import "wrapper";
+        @import "progress";
+    }
+    .media {
+        display: none;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        @import "item";
+        @import "share-popup";
+        @import "head";
+        @import "buttons";
+        @import "survey";
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>sStory Demo</title>
+    <link rel="stylesheet" href="dist/sStory.min.css" />
+</head>
+
+<body>
+    <div class="story-area">
+        <div class="sStory-thumb-wrapper"></div>
+        <div class="sStory-media-wrapper"></div>
+    </div>
+    <script src="storiesData.js"></script>
+    <script src="dist/sStory.min.js"></script>
+    <script async="" src="https://platform.twitter.com/widgets.js?v=23" charset="utf-8"></script>
+    <script>
+        var story = new sStory({
+            data: storiesData
+        });
+    </script>
+</body>
+
+</html>

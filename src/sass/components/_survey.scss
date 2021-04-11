@@ -1,0 +1,66 @@
+.survey {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px 10px rgb(0 0 0 / 25%);
+    z-index: 100;
+    button {
+        background-color: #ffffff;
+        border: 2px solid #f1f1f1;
+        border-radius: 4px;
+        height: 50px;
+        padding: 0 30px;
+        font-size: 190%;
+        font-weight: bold;
+        width: 100%;
+        margin: 10px 0;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        span {
+            background-color: #ffffff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            border-radius: 4px;
+            color: #333333;
+            i {
+                position: absolute;
+                left: -35px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #ffffff;
+                border-radius: 50%;
+                font-size: 12px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: #333333;
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                    border-left: 6px solid #ffffff;
+                    position: absolute;
+                    top: 50%;
+                    right: -4px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}

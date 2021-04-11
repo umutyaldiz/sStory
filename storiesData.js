@@ -2,7 +2,7 @@ storiesData = [
         {
                 id: 0,
                 title: "Survey",
-                cover: "/src/media/survey-cover.jpg",
+                cover: "src/media/survey-cover.jpg",
                 updateTime: 1617486651107,
                 media: [
                         {
@@ -10,7 +10,7 @@ storiesData = [
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "survey",
                                 surveyType: 1,
-                                src: '/src/media/book-story1.jpg',
+                                src: 'src/media/book-story1.jpg',
                                 time: 10,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -57,7 +57,7 @@ storiesData = [
         {
                 id: 1,
                 title: "Youtube Embed",
-                cover: "/src/media/youtube-cover.jpg",
+                cover: "src/media/youtube-cover.jpg",
                 updateTime: 1617486651107,
                 media: [
                         {
@@ -121,7 +121,7 @@ storiesData = [
         {
                 id: 2,
                 title: "Twitter Embed",
-                cover: "/src/media/twitter-cover.jpg",
+                cover: "src/media/twitter-cover.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
@@ -185,14 +185,14 @@ storiesData = [
         {
                 id: 3,
                 title: "Fashion",
-                cover: "/src/media/news-cover-2.jpg",
+                cover: "src/media/news-cover-2.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
                                 id: 1,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "video",
-                                src: "/src/media/example-video-1.mp4",
+                                src: "src/media/example-video-1.mp4",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -220,7 +220,7 @@ storiesData = [
                                 id: 2,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "video",
-                                src: "/src/media/example-video-2.mp4",
+                                src: "src/media/example-video-2.mp4",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -248,7 +248,7 @@ storiesData = [
                                 id: 3,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "video",
-                                src: "/src/media/example-video-3.mp4",
+                                src: "src/media/example-video-3.mp4",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -276,7 +276,7 @@ storiesData = [
                                 id: 4,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "video",
-                                src: "/src/media//example-video-4.mp4",
+                                src: "src/media//example-video-4.mp4",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -305,14 +305,14 @@ storiesData = [
         {
                 id: 4,
                 title: "Book",
-                cover: "/src/media/book-story-cover.jpg",
+                cover: "src/media/book-story-cover.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
                                 id: 1,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/book-story1.jpg",
+                                src: "src/media/book-story1.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -340,7 +340,7 @@ storiesData = [
                                 id: 2,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/book-story2.jpg",
+                                src: "src/media/book-story2.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -368,7 +368,7 @@ storiesData = [
                                 id: 3,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/book-story3.jpg",
+                                src: "src/media/book-story3.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -396,7 +396,7 @@ storiesData = [
                                 id: 4,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/book-story4.jpg",
+                                src: "src/media/book-story4.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -425,14 +425,14 @@ storiesData = [
         {
                 id: 5,
                 title: "News",
-                cover: "/src/media/news-cover.jpg",
+                cover: "src/media/news-cover.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
                                 id: 1,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/news-story1.jpg",
+                                src: "src/media/news-story1.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -460,7 +460,7 @@ storiesData = [
                                 id: 2,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/news-story2.jpg",
+                                src: "src/media/news-story2.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -488,7 +488,7 @@ storiesData = [
                                 id: 3,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/news-story3.jpg",
+                                src: "src/media/news-story3.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -516,7 +516,7 @@ storiesData = [
                                 id: 4,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/news-story4.jpg",
+                                src: "src/media/news-story4.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -545,14 +545,14 @@ storiesData = [
         {
                 id: 6,
                 title: "Movies",
-                cover: "/src/media/movies-cover.jpg",
+                cover: "src/media/movies-cover.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
                                 id: 1,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/movie-story1.jpg",
+                                src: "src/media/movie-story1.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -580,7 +580,7 @@ storiesData = [
                                 id: 2,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/movie-story2.jpg",
+                                src: "src/media/movie-story2.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -609,14 +609,14 @@ storiesData = [
         {
                 id: 7,
                 title: "Online",
-                cover: "/src/media/online-cover.jpg",
+                cover: "src/media/online-cover.jpg",
                 updateTime: "1617478918791",
                 media: [
                         {
                                 id: 1,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/online-story1.jpg",
+                                src: "src/media/online-story1.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -644,7 +644,7 @@ storiesData = [
                                 id: 2,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/online-story2.jpg",
+                                src: "src/media/online-story2.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [
@@ -672,7 +672,7 @@ storiesData = [
                                 id: 3,
                                 title: "Lorem İpsum Dolar sit amet 1",
                                 type: "image",
-                                src: "/src/media/online-story3.jpg",
+                                src: "src/media/online-story3.jpg",
                                 time: 5,
                                 link: 'https: //www.google.com',
                                 social: [

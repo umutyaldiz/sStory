@@ -1,0 +1,27 @@
+{
+  "name": "sstory",
+  "version": "0.0.1",
+  "description": "Instagram story pure Javascript sStory.js",
+  "scripts": {
+    "build": "webpack",
+    "publish": "webpack-dev-server --output-public-path=/dev/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Umut Yaldız <umutyaldiz95@gmail.com> (https://storiesjs.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^3.6.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.3.0",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-remove-empty-scripts": "^0.7.1"
+  }
+}
