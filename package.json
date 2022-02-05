@@ -1,6 +1,6 @@
 {
   "name": "sstory",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Pure Javascript sStory web application",
   "scripts": {
     "watch": "webpack --watch",
