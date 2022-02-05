@@ -1,15 +1,18 @@
 {
   "name": "sstory",
   "version": "0.0.1",
-  "description": "Instagram story pure Javascript sStory.js",
+  "description": "Pure Javascript sStory web application",
   "scripts": {
     "watch": "webpack --watch",
-    "build": "webpack",
-    "publish": "webpack-dev-server --output-public-path=/dev/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "author": "Umut Yaldız <umutyaldiz95@gmail.com> (https://storiesjs.com/)",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/umutyaldiz/sStory.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umutyaldiz/sStory.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/plugin-proposal-class-properties": "^7.13.0",

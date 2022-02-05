@@ -1,2 +1,2 @@
-import Story from './components/builder';
-window.sStory = Story;
+import sStory from './components/builder';
+window.sStory = sStory;

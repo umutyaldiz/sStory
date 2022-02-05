@@ -1,6 +1,6 @@
 import thumbCreate from './thumb-create';
 
-export default class Story {
+export default class sStory {
     constructor(props){
         this.options = Object.assign({}, props);
         this.init();
