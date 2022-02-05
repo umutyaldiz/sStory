@@ -39,6 +39,14 @@ var story = new sStory({
         button: "Detaylı Bilgi", //default
         sendLabel: "Paylaş", //default
         sendButton: "Gönder" //default
+        date: {
+            second: "saniye önce",
+            minute: "dakika önce",
+            hour: "saat önce",
+            day: "gün önce",
+            mounth: "ay önce",
+            year: "yıl önce"
+        }
     }, 
     data: storiesData //stories-data.js JSON List
 });
