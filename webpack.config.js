@@ -5,8 +5,7 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 module.exports = {
     mode: 'production',
     entry: {
-        sStory: ['./src/js/components/builder.js','./src/sass/sstory.scss'],
-        // sStoryStyle: ['./src/sass/sstory.scss']
+        sStory: ['./src/js/story.js','./src/sass/sstory.scss'],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

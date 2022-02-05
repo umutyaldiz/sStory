@@ -1,5 +1,5 @@
 # sStory
-instagram alternative story pure javascript
+Pure Javascript Story web application
 
 https://storiesjs.com/ <br />
 https://storiesjs.com/demos
@@ -27,7 +27,7 @@ https://storiesjs.com/demos
             sendLabel: "Paylaş", //default
             sendButton: "Gönder" //default
         }, 
-        data: storiesData //storiesData.js JSON List
+        data: storiesData //stories-data.js JSON List
     });
 </script>
 </code>

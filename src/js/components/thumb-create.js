@@ -1,5 +1,5 @@
-import mediaCreate from './mediaCreate';
-import storage from './sessionStorage';
+import mediaCreate from './media-create';
+import storage from './storage';
 import swipe from './swipe';
 import modal from './modal';
 
@@ -13,7 +13,15 @@ export default class thumbCreate {
             language: {
                 button: "Detaylı Bilgi",
                 sendLabel: "Paylaş",
-                sendButton: "Gönder"
+                sendButton: "Gönder",
+                date: {
+                    second: "saniye önce",
+                    minute: "dakika önce",
+                    hour: "saat önce",
+                    day: "gün önce",
+                    mounth: "ay önce",
+                    year: "yıl önce"
+                }
             }
         };
         this.options = Object.assign(this.default, props);
