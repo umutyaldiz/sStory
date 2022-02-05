@@ -1,6 +1,6 @@
 {
   "name": "sstory",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Pure Javascript sStory web application",
   "scripts": {
     "watch": "webpack --watch",
@@ -15,6 +15,12 @@
   },
   "main": "index.js",
   "module": "index.js",
+  "keywords": [
+    "github",
+    "sStory",
+    "instagram",
+    "story"
+  ],
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
