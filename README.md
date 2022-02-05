@@ -2,14 +2,23 @@
 Pure Javascript Story web application
 
 https://storiesjs.com/
+
+
 https://storiesjs.com/demos
 
 ## Installation
 
-script:
+npm:
 ```sh
 npm i sstory
 ```
+
+
+script:
+```sh
+import sStory from 'sstory';
+```
+
 
 style:
 ```sh
