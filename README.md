@@ -1,10 +1,7 @@
 # sStory
 Pure Javascript Story web application
 
-https://storiesjs.com/
-
-
-https://storiesjs.com/demos
+[https://storiesjs.com/demos](https://umutyaldiz.com/storiesjs/index.html)
 
 ## Installation
 
